@@ -1,126 +1,187 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins','sans-serif';
-    box-sizing: border-box;
 }
-#container{
-     width: 100%;
-     min-height: 100vh;
-     background:linear-gradient(135deg,#153677,#4e085f);
-     padding: 10px;
+body{
+    background-color: black;
+}
+.main{
+    background-image: url("axssets/img/bag.jpg");
+    height: 90vh;
+    position: relative;
+    background-position: center center;
+    background-repeat: none;
+    background-size: max(1200px , 100vw)
     
+}
+.main .box{
+    height: 90vh;
+    width: 100%;
+    opacity: 0.65;
+    background-color:black;
+    position: absolute;
+    top: 0;
 
 }
-#todo-header{
-      width: 100%;
-      max-width: 100vh;
-      background: white;
-      margin: 100px auto 100px;
-      padding: 20px 50px 70px;
-      border-radius: 10px;
-      
-      
-}
-#row{
-    margin:10px;
+
+nav  {
     display: flex;
-    align-items: center;
+    max-width:80vw;
+    margin: auto;
     justify-content: space-between;
-    background: #ededed;
-    border-radius: 30px;
-    padding-left: 30px;
-    margin-bottom: 20px;
+    align-items: center;
+    height: 62px;
 }
-#todo-input{
-    /* width: 300px; */
-    /* height: 35px; */
-    margin-left: 120px;
-    flex:1;
-    border: none;
-    outline: none;
-    background: transparent;
-    /* margin-left: 30px; */
-    padding: 10px;
-    margin: 0px 20px 0px 20px;
-    font-size:20px;
-}
-button{
-    /* width:100px; */
-    /* flex:2; */
-    /* height: 35px; */
-    font-style:normal;
-    font-weight: bolder;
-    font-size: larger;
-    background-color: rgb(189, 67, 6);
-    color: white;
-    border-radius: 25px;
-    border: none;
-    outline: none;
-    padding: 15px 50px;
-    cursor: pointer;
-
-}
-ul li{
-    list-style:none;
-    font-size: 17px;
-    padding: 15px 8px 15px 50px;
-    margin-left: 15px;
-    user-select: none;
-    cursor: pointer;
+img nav{
+    color:darkred;
+    position: relative;
+    width: 114px;
+    z-index: 10;
     position: relative;
 }
-ul li::before{
-    content: '';
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    background-image: url(checkbox.svg);
-    background-size: cover;
-    background-position: center;
-    left: 10px;                  /* 👈 YE ADD KARNA HAI */
-    top: 50%;                    /* 👈 YE ADD KARNA HAI */
-    transform: translateY(-50%);
+ nav button{
+    width: 114px;
+    z-index: 10;
+    font-size:larger;
+    position: relative;
+    background-color: rgba(23, 23 ,23, 0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+;
 }
-ul li.check{
-  
-    text-decoration:line-through;
+ nav .sing{
+    background-color: red;
+    position: relative;
+    
 }
-ul li.check::before{
-      background-image: url(check.png);
-}
-ul li span{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    color: #555;
-    font-size: 25px;
-    left: 550px;
-    top:10px;
-    bottom: 0px;
-    font-weight: bolder;
+.hero{
+    height: 300px;
+    justify-content: center;
     align-items: center;
+    color: white;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    margin: 100px;
+    gap:50px;
+}
+.hero:first-child(1){
+    font-family: 'poppins' ,sans-serif ;
+    font-weight: bolder;
+    font-size: 1000px;
     text-align: center;
-    border-radius: 50%;
+    font-weight: 500;
+}
+.hero:nth-child(2){
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      gap: 10px;
+}
+.hero:nth-child(3){
+    font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+}
+.separation{
+    height: 7px;
+    background-color: rgb(59, 57, 57);
+}
+  .bnt-red-bnt{
+    background-color: red;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+  }
+  .main input{
+    padding: 5px 101px 8px 14px ;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(23, 23 ,23, 0.2);
+    border: 1px solid white;
+  }
+  .sm{
+         
+  }
+  .red{
+      font-size: large;
+      border: 1px solid white;
+   }
+   .first {
+  justify-content: center;
+  display: flex;
+  max-width: 70vw;
+  margin: auto;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+   }
+   .separation{
+    height: 5px;
+    background-color: rgb(93, 89, 89);
 
-}
-ul li span:hover{
-    background: transparent;
-    background-color: rgb(235, 230, 230);
-}
+   }
+   .secImg{
+    width: 30vw;
+   }
+   .secImg{
+    position: relative;
+   }
+   .secImg video{
+    position: absolute;
+    top: 95px;
+    right:-95px;
+    border: 2px solid rgb(87, 83, 83);
+   }
+   .first>div :nth-child(1){
+    font-size: 50px;
+    font-weight: bold;
+   }
+   .first>div :nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+   }
+   .first>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+   }
+   .second>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+   }
+   .faq h2{
+    text-align:center;
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    justify-content: space-around;
+   }
+   
+   .faq{
+    background-color: black;
+    color: white;
+     }
+     .faqbox:hover{
+        transition: all 1s ease-in-out;
+        background-color:rgb(66, 68, 68);
+     }
 
-@media only screen and (max-width:600px){
-    #todo-header{
-        text-align: center;
-        align-items: center;
+    .faqbox{
+        font-size: 48px;
+        display: flex;
+        background-color:rgb(43, 41, 41);
+        color: white;
+        padding: 15px;
+        margin: 10px;
+       max-width: 60vw;
+       margin: 5px auto;
+       font-size: x-large;
+       justify-content: space-around;
+       cursor: pointer;
+
+    
     }
-}
-@media only screen and (max-width:600px){
-    #row{
-        text-align: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-}
+
+    
