@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+    box-sizing: border-box;
+}
+#container{
+     width: 100%;
+     min-height: 100vh;
+     background:linear-gradient(135deg,#153677,#4e085f);
+     padding: 10px;
+    
+
+}
+#todo-header{
+      width: 100%;
+      max-width: 100vh;
+      background: white;
+      margin: 100px auto 100px;
+      padding: 20px 50px 70px;
+      border-radius: 10px;
+      
+      
+}
+#row{
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ededed;
+    border-radius: 30px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+#todo-input{
+    /* width: 300px; */
+    /* height: 35px; */
+    margin-left: 120px;
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    /* margin-left: 30px; */
+    padding: 10px;
+    margin: 0px 20px 0px 20px;
+    font-size:20px;
+}
+button{
+    /* width:100px; */
+    /* flex:2; */
+    /* height: 35px; */
+    font-style:normal;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: rgb(189, 67, 6);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 15px 50px;
+    cursor: pointer;
+
+}
+ul li{
+    list-style:none;
+    font-size: 17px;
+    padding: 15px 8px 15px 50px;
+    margin-left: 15px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url(checkbox.svg);
+    background-size: cover;
+    background-position: center;
+    left: 10px;                  /* 👈 YE ADD KARNA HAI */
+    top: 50%;                    /* 👈 YE ADD KARNA HAI */
+    transform: translateY(-50%);
+}
+ul li.check{
+  
+    text-decoration:line-through;
+}
+ul li.check::before{
+      background-image: url(check.png);
+}
+ul li span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: #555;
+    font-size: 25px;
+    left: 550px;
+    top:10px;
+    bottom: 0px;
+    font-weight: bolder;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background: transparent;
+    background-color: rgb(235, 230, 230);
+}
+
+@media only screen and (max-width:600px){
+    #todo-header{
+        text-align: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width:600px){
+    #row{
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
